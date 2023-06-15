@@ -1,0 +1,31 @@
+.brakePedal-button {
+    height: 100%;
+    background-color: rgba(56, 56, 56, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-image: resource('Sprites/UI/pedal-brake-normal');
+    width: 18%;
+}
+
+.brakePedal-button:active {
+    height: 100%;
+    background-image: resource('Sprites/UI/pedal-brake-pressed');
+    width: 18%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.gasPedal-button {
+    height: 100%;
+    background-image: resource('Sprites/UI/pedal-gas-normal');
+    width: 18%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.gasPedal-button:active {
+    height: 100%;
+    background-image: resource('Sprites/UI/pedal-gas-pressed');
+    width: 18%;
+    background-color: rgba(0, 0, 0, 0);
+}
