@@ -7,8 +7,8 @@ public class MoveController : MonoBehaviour
     [SerializeField] ButtonHeldController _gasButton;
     [SerializeField] ButtonHeldController _brakeButton;
 
-    private bool _isGasButtonPressed;
-    private bool _isBrakeButtonPressed;
+    public bool IsGasButtonPressed { get; private set; }
+    public bool IsBrakeButtonPressed { get; private set; }
 
     private void Start()
     {
@@ -20,20 +20,20 @@ public class MoveController : MonoBehaviour
 
     private void Update()
     {
-        if (_isGasButtonPressed)
+        if (IsGasButtonPressed)
         {
             MoveForward();
         }
-        else if (_isBrakeButtonPressed)
+        else if (IsBrakeButtonPressed)
         {
             MoveBackward();
         }
     }
 
-    private void OnGasButtonPressed() => _isGasButtonPressed = true;
-    private void OnGasButtonReleased() => _isGasButtonPressed = false;
-    private void OnBrakeButtonPressed() => _isBrakeButtonPressed = true;
-    private void OnBrakeButtonReleased() => _isBrakeButtonPressed = false;
+    private void OnGasButtonPressed() => IsGasButtonPressed = true;
+    private void OnGasButtonReleased() => IsGasButtonPressed = false;
+    private void OnBrakeButtonPressed() => IsBrakeButtonPressed = true;
+    private void OnBrakeButtonReleased() => IsBrakeButtonPressed = false;
 
     public void MoveForward()
     {

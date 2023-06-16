@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//On the future
 public class TapController : MonoBehaviour
 {
     public UnityEvent OnTapStarted = new(), OnTapEnded = new();
